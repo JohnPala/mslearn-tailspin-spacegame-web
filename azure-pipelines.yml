@@ -3,7 +3,8 @@ trigger:
   
   pool:
     vmImage: 'ubuntu-18.04'
-    demands: npm
+    demands:
+    - npm
   
   variables:
     buildConfiguration: 'Release'
@@ -42,5 +43,3 @@ trigger:
       command: 'build'
       arguments: '--no-restore --configuration Release'
       projects: '**/*.csproj'
-
-      #
